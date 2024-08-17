@@ -20,73 +20,138 @@
 </head>
 
 <body>
-    <nav class="bg-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between">
-                <div class="flex space-x-4">
-                    <!-- Logo -->
-                    <div>
-                        <a href="index.html" class="flex items-center py-5 px-2 text-gray-700">
-                            <span class="font-bold text-xl">Logo</span>
+    <nav class="bg-white border-gray-200 pr-2">
+        <div class="flex flex-wrap justify-between p-4">
+            <!-- Mobile menu button -->
+            <div class="md:hidden lg:hidden">
+                <button id="mobile-menu-button" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    aria-controls="navbar-multi-level" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+    
+            <!-- Logo -->
+            <a href="#" class="flex items-center justify-start cursor-pointer space-x-3 rtl:space-x-reverse">
+                <img src="assets/logo.webp" class="h-10 lg:h-20" alt="Flowbite Logo" />
+            </a>
+    
+            <!-- Navbar content -->
+            <div class="hidden w-full h-full lg:flex justify-between gap-6 flex-col md:w-auto" id="navbar-multi-level">
+                <a href="#" class="text-[#0587cf] text-sm text-right">One Stop Solution Service Provider for all kind of
+                    Refrigerant Gas & Motor Capacitor Products.</a>
+                <ul class="flex flex-col text-[#0587cf] uppercase md:justify-end text-lg p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                    <li>
+                        <a href="index.html" class="block py-2 px-3 text-white hover:text-[#0588cf9d] rounded md:bg-transparent md:text-[#0587cf] md:p-0"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li class="relative border-b-4 font-semibold border-b-[#0587cf] group">
+                        <a href="products.html" class="block py-2 px-3 rounded hover:text-[#0588cf9d] md:hover:bg-transparent md:border-0 md:p-0">
+                            Products
                         </a>
-                    </div>
-                    <!-- Primary Navbar items -->
-                    <ul class="hidden md:flex items-center space-x-1">
-                        <li><a href="index.html" class="py-5 px-3 text-gray-700">Home</a></li>
-                        <li class="relative group">
-                            <a href="products.html" class="py-5 px-3 text-gray-700 inline-flex items-center">
-                                Products
-                                <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20">
-                                    <path
-                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-                                </svg>
-                            </a>
-                            <ul class="absolute hidden group-hover:block bg-white shadow-lg">
-                                <li><a href="#" class="block px-4 py-2 text-gray-700">Refrigerant Gas</a></li>
-                                <li><a href="#" class="block px-4 py-2 text-gray-700">Capacitors</a></li>
-                                <li><a href="#" class="block px-4 py-2 text-gray-700">Air Conditioning Maintenance</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="py-5 px-3 text-gray-700">About Us</a></li>
-                        <li><a href="#" class="py-5 px-3 text-gray-700">Video</a></li>
-                        <li><a href="#" class="py-5 px-3 text-gray-700">News Center</a></li>
-                        <li><a href="contact-us.html" class="py-5 px-3 text-gray-700">Contact Us</a></li>
-                    </ul>
-                </div>
-                <!-- Secondary Navbar items -->
-                <div class="hidden  items-center space-x-1">
-                    <a href="#" class="py-5 px-3 text-gray-700">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path>
-                        </svg>
-                    </a>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden lg:hidden flex items-center">
-                    <button class="mobile-menu-button ">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
+                        <!-- Dropdown menu -->
+                        <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2 py-2 rounded-lg z-10 w-56">
+                            <li>
+                                <a href="/refrigerant-gas" class="block px-4 py-2 hover:bg-gray-100">REFRIGERANT GAS</a>
+                            </li>
+                            <li>
+                                <a href="/capacitors" class="block px-4 py-2 hover:bg-gray-100">CAPACITORS</a>
+                            </li>
+                            <li>
+                                <a href="/air-conditioning-maintenance" class="block px-4 py-2 hover:bg-gray-100">Air Conditioning Maintenance</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 rounded hover:text-[#0588cf9d] md:hover:bg-transparent md:border-0 md:p-0">About us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 rounded hover:text-[#0588cf9d] md:hover:bg-transparent md:border-0 md:p-0">Video</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 rounded hover:text-[#0588cf9d] md:hover:bg-transparent md:border-0 md:p-0">News Center</a>
+                    </li>
+                    <li>
+                        <a href="contact-us.html" class="block py-2 px-3 rounded hover:text-[#0588cf9d] md:hover:bg-transparent md:border-0 md:p-0">Contact Us</a>
+                    </li>
+                    <li>
+                        <div class="search">
+                            <div class="icon_bx active" widget-style="search">
+                                <span class="icon-sousuo2"></span>
+                                <div class="search_box bg-color">
+                                    <form action="/search/index/" method="post" class="search_div_form noScrollMove" widget-style="background-color" style="background-position: 0% 0%; background-color: rgb(255, 255, 255); background-size: auto; background-repeat: repeat;">
+                                        <input type="text" name="searchname" placeholder="Search" required="" autocomplete="off">
+                                        <div class="header_search_select" style="display: none;">
+                                            <ul></ul>
+                                        </div>
+                                        <button class="icon-sousuo2"></button>
+                                        <i class="icon-clear"></i>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <!-- Mobile Menu -->
-        <ul class="mobile-menu hidden md:hidden">
-            <li><a href="#" class="block py-2 px-4 text-sm">Home</a></li>
-            <li><a href="#" class="block py-2 px-4 text-sm">Products</a></li>
-            <li><a href="#" class="block py-2 px-4 text-sm">About Us</a></li>
-            <li><a href="#" class="block py-2 px-4 text-sm">Video</a></li>
-            <li><a href="#" class="block py-2 px-4 text-sm">News Center</a></li>
-            <li><a href="#" class="block py-2 px-4 text-sm">Contact Us</a></li>
-        </ul>
-    </nav>
+    
+        <!-- Mobile menu, show/hide based on menu state -->
+        <div id="mobile-menu" class="hidden md:hidden lg:hidden">
+            <ul class="flex flex-col p-4 space-y-4">
+                <li>
+                    <a href="index.html" class="block py-2 px-3 text-[#0587cf] hover:text-[#0588cf9d] rounded">Home</a>
+                </li>
+                <li class="relative group">
+                    <a href="products.html" class="block py-2 px-3 text-[#0587cf] hover:text-[#0588cf9d] rounded">Products</a>
+                    <!-- Mobile dropdown menu -->
+                    <ul class="hidden group-hover:block bg-white shadow-lg mt-2 py-2 rounded-lg z-10">
+                        <li>
+                            <a href="/refrigerant-gas" class="block px-4 py-2 hover:bg-gray-100">REFRIGERANT GAS</a>
+                        </li>
+                        <li>
+                            <a href="/capacitors" class="block px-4 py-2 hover:bg-gray-100">CAPACITORS</a>
+                        </li>
+                        <li>
+                            <a href="/air-conditioning-maintenance" class="block px-4 py-2 hover:bg-gray-100">Air Conditioning Maintenance</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 px-3 text-[#0587cf] hover:text-[#0588cf9d] rounded">About us</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 px-3 text-[#0587cf] hover:text-[#0588cf9d] rounded">Video</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 px-3 text-[#0587cf] hover:text-[#0588cf9d] rounded">News Center</a>
+                </li>
+                <li>
+                    <a href="contact-us.html" class="block py-2 px-3 text-[#0587cf] hover:text-[#0588cf9d] rounded">Contact Us</a>
+                </li>
+                <li>
+                    <div class="search">
+                        <div class="icon_bx active" widget-style="search">
+                            <span class="icon-sousuo2"></span>
+                            <div class="search_box bg-color">
+                                <form action="/search/index/" method="post" class="search_div_form noScrollMove" widget-style="background-color" style="background-position: 0% 0%; background-color: rgb(255, 255, 255); background-size: auto; background-repeat: repeat;">
+                                    <input type="text" name="searchname" placeholder="Search" required="" autocomplete="off">
+                                    <div class="header_search_select" style="display: none;">
+                                        <ul></ul>
+                                    </div>
+                                    <button class="icon-sousuo2"></button>
+                                    <i class="icon-clear"></i>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>>
     <div class="w-full h-[270px]">
         <div class="w-full h-full relative text-center">
             <img src="Image/contact.webp" class="w-full h-full object-cover" alt="">
@@ -227,7 +292,14 @@
     </section>
     <!--================ Contact Cart Section Start===========-->
 
-
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+      
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+      </script>
 
 </body>
 
