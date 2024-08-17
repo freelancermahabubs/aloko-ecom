@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Tailwind CSS</title>
+    <!-- tailwind css link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Style Css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome  -->
+    <script src="https://kit.fontawesome.com/53025ffb8e.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-4">
+                    <!-- Logo -->
+                    <div>
+                        <a href="index.html" class="flex items-center py-5 px-2 text-gray-700">
+                            <span class="font-bold text-xl">Logo</span>
+                        </a>
+                    </div>
+                    <!-- Primary Navbar items -->
+                    <ul class="hidden md:flex items-center space-x-1">
+                        <li><a href="index.html" class="py-5 px-3 text-gray-700">Home</a></li>
+                        <li class="relative group">
+                            <a href="products.html" class="py-5 px-3 text-gray-700 inline-flex items-center">
+                                Products
+                                <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                                </svg>
+                            </a>
+                            <ul class="absolute hidden group-hover:block bg-white shadow-lg">
+                                <li><a href="#" class="block px-4 py-2 text-gray-700">Refrigerant Gas</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-gray-700">Capacitors</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-gray-700">Air Conditioning Maintenance</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="py-5 px-3 text-gray-700">About Us</a></li>
+                        <li><a href="#" class="py-5 px-3 text-gray-700">Video</a></li>
+                        <li><a href="#" class="py-5 px-3 text-gray-700">News Center</a></li>
+                        <li><a href="contact-us.html" class="py-5 px-3 text-gray-700">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Secondary Navbar items -->
+                <div class="hidden  items-center space-x-1">
+                    <a href="#" class="py-5 px-3 text-gray-700">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path>
+                        </svg>
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden lg:hidden flex items-center">
+                    <button class="mobile-menu-button ">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <ul class="mobile-menu hidden md:hidden">
+            <li><a href="#" class="block py-2 px-4 text-sm">Home</a></li>
+            <li><a href="#" class="block py-2 px-4 text-sm">Products</a></li>
+            <li><a href="#" class="block py-2 px-4 text-sm">About Us</a></li>
+            <li><a href="#" class="block py-2 px-4 text-sm">Video</a></li>
+            <li><a href="#" class="block py-2 px-4 text-sm">News Center</a></li>
+            <li><a href="#" class="block py-2 px-4 text-sm">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="w-full h-[270px]">
+        <div class="w-full h-full relative text-center">
+            <img src="Image/contact.webp" class="w-full h-full object-cover" alt="">
+            <div class="absolute px-2 flex-col top-0 left-0 w-full h-full flex items-center justify-center">
+                <h4 class="text-center text-[16px] lg:text-[28px] font-medium mb-2">PRODUCTS</h4>
+
+                <div class="mt-2">
+                    <ul class="flex items-center gap-2">
+                        <li class="text-[16px] lg:text-[18px]">Home</li>
+                        <li class="text-[16px] lg:text-[18px]">></li>
+                        <li class="text-[16px] lg:text-[18px]">PRODUCTS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- product category page start  -->
+    <section class="mt-10">
+        <div class="container">
+            <div class="flex align-baseline justify-bewteen gap-4">
+                <div class="w-full lg:w-[20%] hidden lg:block">
+                    <h2 class="text-lg font-bold mb-2">PRODUCTS</h2>
+                    <ul class="list-group bg-color-h description">
+                        <li class="list-group-item">
+                            <a class="products_category_list" href="#">REFRIGERANT
+                                GAS</a>
+                            <ul class="list-group2">
+                                <li class="list-group-item">
+                                    <a class="text-[14px]" href="#"> hfc refrigerant </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="text-[14px]" href="#">
+                                        hcfc refrigerant </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="text-[14px]" href="#">
+
+                                        hfo refrigerant </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="text-[14px]" href="#">
+
+                                        hc refrigerant </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="w-full lg:w-[78%] ">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+                        <div class="text-center">
+                            <a href="#" class="block cursor-pointer">
+                                <div class="w-full h-full overflow-hidden">
+                                    <img class="aspect-square transition-transform duration-300 ease-in-out transform hover:scale-125"
+                                        src="https://img80003071.weyesimg.com/uploads/ecmrefrigerant.com/images/16244568941373.jpg?imageView2/2/w/1000/q/90/format/webp"
+                                        alt="products_category">
+                                </div>
+                                <h2 class="mt-2 text-[14px] lg:text-[16px] leading:[18px] lg:leading-[22px]">
+                                    Refrigerant Detection Super Seal Auto Air Conditioning Stop Leak</h2>
+                            </a>
+                        </div>
+                        <div class="text-center">
+                            <a href="#" class="block cursor-pointer">
+                                <div class="w-full h-full overflow-hidden">
+                                    <img class="aspect-square transition-transform duration-300 ease-in-out transform hover:scale-125"
+                                        src="https://img.weyesimg.com/collection/b3e218c99be8869f02752e5e600c1df2/940e02efa979d2a0fc445a331ec8a23e.jpg?imageView2/2/w/1000/q/90/format/webp"
+                                        alt="products_category">
+                                </div>
+                                <h2 class="mt-2 text-[14px] lg:text-[16px] leading:[18px] lg:leading-[22px]">
+                                    Refrigerant Detection Super Seal Auto Air Conditioning Stop Leak</h2>
+                            </a>
+                        </div>
+                        <div class="text-center">
+                            <a href="#" class="block cursor-pointer">
+                                <div class="w-full h-full overflow-hidden">
+                                    <img class="aspect-square transition-transform duration-300 ease-in-out transform hover:scale-125"
+                                        src="https://img.weyesimg.com/collection/b3e218c99be8869f02752e5e600c1df2/940e02efa979d2a0fc445a331ec8a23e.jpg?imageView2/2/w/1000/q/90/format/webp"
+                                        alt="products_category">
+                                </div>
+                                <h2 class="mt-2 text-[14px] lg:text-[16px] leading:[18px] lg:leading-[22px]">
+                                    Refrigerant Detection Super Seal Auto Air Conditioning Stop Leak</h2>
+                            </a>
+                        </div>
+                        <div class="text-center">
+                            <a href="#" class="block cursor-pointer">
+                                <div class="w-full h-full overflow-hidden">
+                                    <img class="aspect-square transition-transform duration-300 ease-in-out transform hover:scale-125"
+                                        src="https://img.weyesimg.com/collection/b3e218c99be8869f02752e5e600c1df2/940e02efa979d2a0fc445a331ec8a23e.jpg?imageView2/2/w/1000/q/90/format/webp"
+                                        alt="products_category">
+                                </div>
+                                <h2 class="mt-2 text-[14px] lg:text-[16px] leading:[18px] lg:leading-[22px]">
+                                    Refrigerant Detection Super Seal Auto Air Conditioning Stop Leak</h2>
+                            </a>
+                        </div>
+                        <div class="text-center">
+                            <a href="#" class="block cursor-pointer">
+                                <div class="w-full h-full overflow-hidden">
+                                    <img class="aspect-square transition-transform duration-300 ease-in-out transform hover:scale-125"
+                                        src="https://img.weyesimg.com/collection/b3e218c99be8869f02752e5e600c1df2/940e02efa979d2a0fc445a331ec8a23e.jpg?imageView2/2/w/1000/q/90/format/webp"
+                                        alt="products_category">
+                                </div>
+                                <h2 class="mt-2 text-[14px] lg:text-[16px] leading:[18px] lg:leading-[22px]">
+                                    Refrigerant Detection Super Seal Auto Air Conditioning Stop Leak</h2>
+                            </a>
+                        </div>
+                        <div class="text-center">
+                            <a href="#" class="block cursor-pointer">
+                                <div class="w-full h-full overflow-hidden">
+                                    <img class="aspect-square transition-transform duration-300 ease-in-out transform hover:scale-125"
+                                        src="https://img.weyesimg.com/collection/b3e218c99be8869f02752e5e600c1df2/940e02efa979d2a0fc445a331ec8a23e.jpg?imageView2/2/w/1000/q/90/format/webp"
+                                        alt="products_category">
+                                </div>
+                                <h2 class="mt-2 text-[14px] lg:text-[16px] leading:[18px] lg:leading-[22px]">
+                                    Refrigerant Detection Super Seal Auto Air Conditioning Stop Leak</h2>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- page button -->
+                    <div class="mt-16 mb-10 flex justify-end items-end">
+                       <div class=" lg:w-[540px] w-full">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <a href="#"
+                                    class="w-[38px] h-[38px] rounded-full bg-[#0487CF] text-white flex items-center justify-center font-medium text-center">1</a>
+                                <a href="#"
+                                    class="w-[38px] h-[38px] rounded-full bg-[#fff] hover:bg-[#0487CF] hover:text-white text-[#999] flex items-center justify-center font-medium text-center">2</a>
+                                <a href="#"
+                                    class="w-[38px] h-[38px] rounded-full bg-[#fff] hover:bg-[#0487CF] hover:text-white text-[#999] flex items-center justify-center font-medium text-center">3</a>
+                                <span class="text-[#999]">....</span>
+                                <a href="#"
+                                    class="w-[38px] h-[38px] rounded-full bg-[#fff] hover:bg-[#0487CF] hover:text-white text-[#999] flex items-center justify-center font-medium text-center">50</a>
+                            </div>
+                            <div>
+                                <a href="#" class="text-[14px] text-[#999]">NEXT PAGE <span
+                                        class="text-[#0487CF] ml-2"><i class="fa-solid fa-arrow-right"></i></span></a>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- product category page end -->
+
+</body>
+
+</html>
